@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tóth Csaba - Technológia és informatika</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(120deg, #101c3a, #087eae);
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        nav {
+            background-color: #152442;
+            text-align: center;
+            padding: 12px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 10px 14px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #087eae;
+            border-radius: 5px;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 0 18px;
+        }
+
+        section {
+            display: none;
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px #00000012;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h2 {
+            color: #087eae;
+            border-bottom: 2px solid #087eae;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: #152442;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-height: 390px;
+            object-fit: cover;
+        }
+
+        a {
+            color: #087eae;
+        }
+
+        .highlight {
+            background-color: #e3f5ff;
+            padding: 15px;
+            border-left: 5px solid #087eae;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #152442;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f0f4f8;
+        }
+
+        button {
+            background-color: #087eae;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #152442;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #152442;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            nav a {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            section {
+                padding: 16px;
+            }
+
+            table {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Tóth Csaba weboldala</h1>
+    <p>Fedezd fel a technológia és az informatika világát!</p>
+</header>
+
+<nav>
+    <a href="#fooldal" onclick="oldalValtas('fooldal')">Főoldal</a>
+    <a href="#technologia" onclick="oldalValtas('technologia')">Technológia</a>
+    <a href="#gepek" onclick="oldalValtas('gepek')">Számítógépek</a>
+    <a href="#erdekessegek" onclick="oldalValtas('erdekessegek')">Érdekességek</a>
+    <a href="#kapcsolat" onclick="oldalValtas('kapcsolat')">Kapcsolat</a>
+</nav>
+
+<main>
+
+    <!-- 1. A FŐOLDAL -->
+
+    <section id="fooldal" class="active">
+        <h2>Üdvözöllek a weboldalamon!</h2>
+
+        <img class="hero-image"
+             src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
+             alt="Elektronikai alkatrészek és számítógépes technológia">
+
+        <p>
+            Tóth Csaba vagyok, és ezen az oldalon a
+            <strong>modern technológia</strong> és az informatika
+            világát szeretném bemutatni.
+        </p>
+
+        <p>
+            A számítógépek, az internet és az új digitális megoldások
+            egyre fontosabb szerepet töltenek be a mindennapjainkban.
+            Ezen a weboldalon érdekes információkat olvashatsz róluk.
+        </p>
+
+        <div class="highlight">
+            <strong>Tudtad?</strong>
+            Az internet segítségével a világ különböző pontjain élő
+            emberek pillanatok alatt kapcsolatba léphetnek egymással.
+        </div>
+
+        <h3>Mit találsz az oldalon?</h3>
+
+        <ul>
+            <li>A technológia fejlődését.</li>
+            <li>A számítógépek fő alkatrészeit.</li>
+            <li>Érdekes informatikai tényeket.</li>
+            <li>Hasznos külső hivatkozásokat.</li>
+        </ul>
+
+        <button onclick="oldalValtas('technologia')">
+            Tovább a technológiához
+        </button>
+    </section>
+
+
+    <!-- 2. TECHNOLÓGIA -->
+
+    <section id="technologia">
+        <h2>A technológia világa</h2>
+
+        <img class="hero-image"
+             src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80"
+             alt="A Föld és a digitális hálózatok">
+
+        <p>
+            A technológia folyamatosan fejlődik. Az új találmányok
+            megkönnyítik a munkát, a tanulást és a kommunikációt.
+        </p>
+
+        <h3>Fontos technológiai területek</h3>
+
+        <ol>
+            <li>Mesterséges intelligencia</li>
+            <li>Robotika és automatizálás</li>
+            <li>Internet és hálózatok</li>
+            <li>Virtuális valóság</li>
+            <li>Megújuló energiaforrások</li>
+        </ol>
+
+        <h3>A mesterséges intelligencia</h3>
+
+        <p>
+            A <em>mesterséges intelligencia (MI)</em> olyan
+            technológiai terület, amely lehetővé teszi, hogy
+            a számítógépes rendszerek bizonyos feladatokat
+            tanulással, elemzéssel és következtetéssel oldjanak meg.
+        </p>
+
+        <p>
+            További információ:
+            <a href="https://hu.wikipedia.org/wiki/Mesters%C3%A9ges_intelligencia"
+               target="_blank" rel="noopener noreferrer">
+                Mesterséges intelligencia – Wikipédia
+            </a>
+        </p>
+    </section>
+
+
+    <!-- 3. SZÁMÍTÓGÉPEK -->
+
+    <section id="gepek">
+        <h2>A számítógépek részei</h2>
+
+        <img class="hero-image"
+             src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1200&q=80"
+             alt="Asztali számítógép és számítógép-alkatrészek">
+
+        <p>
+            A számítógép több fontos alkatrészből áll.
+            Ezek együtt teszik lehetővé az adatok feldolgozását,
+            a programok futtatását és a képek megjelenítését.
+        </p>
+
+        <h3>Főbb alkatrészek</h3>
+
+        <table>
+            <tr>
+                <th>Alkatrész</th>
+                <th>Feladata</th>
+                <th>Példa</th>
+            </tr>
+            <tr>
+                <td>Processzor (CPU)</td>
+                <td>Utasítások feldolgozása</td>
+                <td>Intel Core, AMD Ryzen</td>
+            </tr>
+            <tr>
+                <td>Memória (RAM)</td>
+                <td>Ideiglenes adattárolás</td>
+                <td>DDR4, DDR5</td>
+            </tr>
+            <tr>
+                <td>Videokártya (GPU)</td>
+                <td>Grafikai feladatok feldolgozása</td>
+                <td>NVIDIA GeForce, AMD Radeon</td>
+            </tr>
+            <tr>
+                <td>Háttértár</td>
+                <td>Adatok tartós tárolása</td>
+                <td>SSD, HDD</td>
+            </tr>
+            <tr>
+                <td>Alaplap</td>
+                <td>Az alkatrészek összekapcsolása</td>
+                <td>ATX alaplap</td>
+            </tr>
+        </table>
+
+        <h3>Mire használjuk a számítógépet?</h3>
+
+        <ul>
+            <li>Tanulásra és munkára.</li>
+            <li>Internetezésre és kommunikációra.</li>
+            <li>Játékra és szórakozásra.</li>
+            <li>Képek és videók szerkesztésére.</li>
+        </ul>
+    </section>
+
+
+    <!-- 4. ÉRDEKESSÉGEK -->
+
+    <section id="erdekessegek">
+        <h2>Érdekességek az informatika világából</h2>
+
+        <img class="hero-image"
+             src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80"
+             alt="Emberek együtt dolgoznak digitális technológián">
+
+        <h3>1. A számítógépek fejlődése</h3>
+
+        <p>
+            A korai elektronikus számítógépek hatalmas méretűek
+            voltak. A mai eszközök sokkal kisebbek, gyorsabbak,
+            és akár a zsebünkben is elférnek.
+        </p>
+
+        <h3>2. Az internet</h3>
+
+        <p>
+            Az internet a világ számítógépes hálózatait kapcsolja
+            össze, így lehetővé teszi az információk gyors cseréjét.
+        </p>
+
+        <h3>3. Programozás</h3>
+
+        <p>
+            A programozók utasításokat írnak, amelyek alapján
+            a számítógépek különböző feladatokat hajtanak végre.
+        </p>
+
+        <div class="highlight">
+            <h3>Érdekes tény</h3>
+            A HTML segítségével meghatározhatjuk egy weboldal
+            tartalmának szerkezetét, a CSS-sel pedig a megjelenését.
+        </div>
+
+        <h3>Hasznos weboldalak</h3>
+
+        <ul>
+            <li>
+                <a href="https://www.wikipedia.org/"
+                   target="_blank" rel="noopener noreferrer">
+                    Wikipédia – online enciklopédia
+                </a>
+            </li>
+            <li>
+                <a href="https://www.w3schools.com/html/"
+                   target="_blank" rel="noopener noreferrer">
+                    W3Schools – HTML-tanulás
+                </a>
+            </li>
+            <li>
+                <a href="https://developer.mozilla.org/"
+                   target="_blank" rel="noopener noreferrer">
+                    MDN Web Docs – webfejlesztés
+                </a>
+            </li>
+        </ul>
+    </section>
+
+
+    <!-- 5. KAPCSOLAT -->
+
+    <section id="kapcsolat">
+        <h2>Kapcsolat</h2>
+
+        <p>
+            Köszönöm, hogy meglátogattad a weboldalamat!
+            Remélem, érdekesnek találtad a bemutatott témákat.
+        </p>
+
+        <h3>A weboldal készítője</h3>
+
+        <p><strong>Név:</strong> Tóth Csaba</p>
+        <p><strong>Téma:</strong> Technológia és informatika</p>
+        <p><strong>Készült:</strong> HTML és CSS használatával</p>
+
+        <h3>Vissza a főoldalra</h3>
+
+        <p>
+            Ha szeretnéd újra megnézni a kezdőlapot,
+            kattints az alábbi gombra!
+        </p>
+
+        <button onclick="oldalValtas('fooldal')">
+            Vissza a főoldalra
+        </button>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Tóth Csaba | Technológia és informatika</p>
+    <p>Minden jog fenntartva.</p>
+</footer>
+
+<script>
+    function oldalValtas(azonosito) {
+        const oldalak = document.querySelectorAll("main section");
+
+        oldalak.forEach(function(oldal) {
+            oldal.classList.remove("active");
+        });
+
+        const kivalasztott = document.getElementById(azonosito);
+
+        if (kivalasztott) {
+            kivalasztott.classList.add("active");
+        }
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+
+    function aktualisOldalBetoltese() {
+        const azonosito = window.location.hash.substring(1);
+        const oldal = document.getElementById(azonosito);
+
+        if (oldal) {
+            oldalValtas(azonosito);
+        }
+    }
+
+    window.addEventListener("hashchange", aktualisOldalBetoltese);
+    aktualisOldalBetoltese();
+</script>
+
+</body>
+</html>
